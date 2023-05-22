@@ -6,13 +6,13 @@ import smtplib
 def OTP_verifying(count):
     sender=smtplib.SMTP("smtp.gmail.com",587)
     sender.starttls()
-    sender.login("pythonlearning13112002@gmail.com","ciqdwdqwebsfvcfj")
+    sender.login("__sender_gmailID___","__16_Digit__code___")
     receiver_emailid=str(input("Enter your Email ID :"))
     OTP=""
     for i in range(6):
         rn=random.randint(0,10)
         OTP+=str(rn)
-    sender.sendmail("pythonlearning13112002@gmail.com",receiver_emailid,OTP)
+    sender.sendmail("__sender_gmailID___",receiver_emailid,OTP)
     Verifing_otp=str(input("Enter the OTP sent to your mail :"))
     if Verifing_otp==OTP:
         print("OTP Verification Successful")
